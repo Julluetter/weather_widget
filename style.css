@@ -17,5 +17,56 @@
   margin-top: 20px;
   background-color: #fff;
   width: 80%;
-  height: 60%;
+  height: 70%;
+}
+.container-weather_blocks {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.weather {
+  border-left: 1px solid grey;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+}
+.weather:first-child {
+  border: none;
+}
+.dayWeek {
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.day {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.image {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.image i.fas.fa-sun {
+  color: #fbf412;
+}
+.image i.fas.fa-clouds {
+  color: #459be6;
+}
+.dayTemperature {
+  font-size: 20px;
+  font-weight: 500;
+}
+.nightTemperature {
+  font-size: 12px;
+  font-weight: 500;
+  color: #767f7f;
+  padding-bottom: 20px;
+}
+.cloudiness {
+  font-size: 12px;
+  font-weight: 500;
+  color: grey;
 }
