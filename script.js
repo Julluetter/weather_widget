@@ -1,35 +1,52 @@
 $(function () {
+
+  let currentDay = moment().format('D MMMM'),
+      secondDay = moment().add('days', 1).format('D MMMM'),
+      thirdDay = moment().add('days', 2).format('D MMMM'),
+      fourthDay = moment().add('days', 3).format('D MMMM');
+
   let weather = [
     {
-      date: 1538337600000,
+      date: currentDay,
       temperature: {
-        night: -3,
-        day: 2,
+        day: 25,
+        night: 18,
       },
       cloudiness: 'Ясно',
       snow: false,
       rain: false,
     },
     {
-      date: 1538424000000,
+      date: secondDay,
       temperature: {
-        night: 0,
-        day: 4,
+        day: 20,
+        night: 15,
       },
       cloudiness: 'Облачно',
       snow: false,
       rain: true,
     },
     {
-      date: 1538510400000,
+      date: thirdDay,
       temperature: {
-        night: 0,
-        day: 1,
+        day: 30,
+        night: 28,
+      },
+      cloudiness: 'Ясно',
+      snow: false,
+      rain: false,
+    },
+    {
+      date: fourthDay,
+      temperature: {
+        day: 21,
+        night: 15,
       },
       cloudiness: 'Облачно',
-      snow: true,
+      snow: false,
       rain: true,
     },
   ];
-  console.log(weather[i].date);
+
+  console.log(weather);
 });

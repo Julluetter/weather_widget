@@ -1,0 +1,21 @@
+.custom-container {
+  width: 80%;
+  height: 500px;
+  background-color: #dee4e8;
+  margin: auto;
+  padding: 50px 0 0 0;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.custom-container span {
+  font-size: 45px;
+  font-weight: 500;
+}
+.container-weather {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #fff;
+  width: 80%;
+  height: 60%;
+}
