@@ -13,6 +13,7 @@
 <body>
   <div class="custom-container">
     <span>Прогноз погоды</span>
+    <i class="far fa-chevron-left fa-chevron-disable" id="prev"></i>
     <div class="container-weather">
       <div class="container-weather_blocks">
         <div class="weather" data-id="current">
@@ -47,10 +48,18 @@
         <div class="nightTemperature"></div>
         <div class="cloudiness"></div>
       </div>
+        <div class="weather" data-id="add">
+          <div class="dayWeek"></div>
+          <div class="day"></div>
+          <div class="image"><i class="fas fa-sun"></i></div>
+          <div class="dayTemperature"></div>
+          <div class="nightTemperature"></div>
+          <div class="cloudiness"></div>
+        </div>
       </div>
-    </div>  
+    </div>
+    <i class="far fa-chevron-right fa-chevron-active" id="next"></i>
   </div>
-
   <script src="script.js"></script>
   <script src="libs/Moment/moment.min.js"></script>
   <script src="libs/Moment/moment.ru.min.js"></script>

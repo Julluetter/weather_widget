@@ -11,6 +11,25 @@
   font-size: 45px;
   font-weight: 500;
 }
+.fa-chevron-left {
+  position: absolute;
+  top: 45%;
+  left: 14%;
+  font-size: 45px;
+}
+.fa-chevron-disable {
+  color: #dedede;
+  cursor: default;
+}
+.fa-chevron-active {
+  cursor: pointer;
+}
+.fa-chevron-right {
+  position: absolute;
+  top: 45%;
+  right: 14%;
+  font-size: 45px;
+}
 .container-weather {
   display: flex;
   margin: auto;
@@ -25,7 +44,7 @@
   justify-content: space-between;
 }
 .weather {
-  border-left: 1px solid grey;
+  border-left: 2px solid #dee4e8;
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
@@ -69,4 +88,7 @@
   font-size: 12px;
   font-weight: 500;
   color: grey;
+}
+.weather[data-id="add"] {
+  display: none;
 }

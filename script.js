@@ -3,9 +3,11 @@ $(function () {
       secondDay = moment().add('days', 1).format('D MMMM'),
       thirdDay = moment().add('days', 2).format('D MMMM'),
       fourthDay = moment().add('days', 3).format('D MMMM'),
+      addDay = moment().add('days', 4).format('D MMMM'),
       currentSecondDayWeek = moment().add('days', 1).format('dddd'),
       currentThirdDayWeek = moment().add('days', 2).format('dddd'),
-      currentFourthDayWeek = moment().add('days', 3).format('dddd');
+      currentFourthDayWeek = moment().add('days', 3).format('dddd'),
+      addDayWeek = moment().add('days', 4).format('dddd');
   let weather = [
     {
       id: 'current',
@@ -55,6 +57,18 @@ $(function () {
       snow: false,
       rain: true,
     },
+    {
+      id: 'add',
+      date: addDay,
+      week: addDayWeek,
+      temperature: {
+        day: `днем + ${18}`,
+        night: `ночью + ${12}`,
+      },
+      cloudiness: 'Ясно',
+      snow: false,
+      rain: false,
+    },
   ];
   $('.weather').each(function () {
     let atr = $(this).attr('data-id'),
@@ -80,4 +94,20 @@ $(function () {
     $(this).find('.cloudiness').text(rain.join());
   });
 
+  $('#next').click(function () {
+    $(this).removeClass('fa-chevron-active');
+    $(this).addClass('fa-chevron-disable');
+    $('#prev').removeClass('fa-chevron-disable');
+    $('#prev').addClass('fa-chevron-active');
+    $('.weather[data-id="current"]').css("display", "none");
+    $('.weather[data-id="add"]').css("display", "block");
+  });
+  $('#prev').click(function () {
+    $(this).removeClass('fa-chevron-active');
+    $(this).addClass('fa-chevron-disable');
+    $('#next').removeClass('fa-chevron-disable');
+    $('#next').addClass('fa-chevron-active');
+    $('.weather[data-id="add"]').css("display", "none");
+    $('.weather[data-id="current"]').css("display", "block");
+  });
 });
